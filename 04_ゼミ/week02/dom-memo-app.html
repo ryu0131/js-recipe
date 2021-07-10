@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <input type="text" id="memo" />
+    <button id="add-button">保存</button>
+    <div id="memo-container"></div>
+    <script>
+      const inputText = document.getElementById("memo")
+      const addButton = document.getElementById("add-button")
+      const container = document.getElementById("memo-container")
+
+      addButton.onclick = function() {
+        const text = inputText.value
+
+        // todoを作る
+        const todo = document.createElement("div")
+        todo.textContent = text
+
+        // containerの末尾にtodoを追加する。
+        container.append(todo)
+      }
+    </script>
+  </body>
+</html>
