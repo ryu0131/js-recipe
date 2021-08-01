@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM</title>
+  </head>
+  <body>
+    <section id="ATMapp">
+      <div>
+        <h2>入力画面</h2>
+        <input type="text" v-model="inputValue" />
+        <br /><span>入力額：{{ inputValue }}円</span> <br /><button
+          v-on:click="payment"
+        >
+          入金
+        </button>
+        <button v-on:click="pay">出勤</button>
+      </div>
+      <div>
+        <h2>口座残高</h2>
+        <span>残高：{{ a }}円</span>
+      </div>
+      <div>
+        <h2>取引履歴</h2>
+        <p><span>操作：{{type}}</span></p>
+        <p><span>日付：{{date}}</span></p>
+        <p><span>金額：{{b}}</span></p>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
